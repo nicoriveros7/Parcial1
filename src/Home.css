@@ -1,0 +1,63 @@
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.user-info {
+  width: 200px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.activity-card {
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1534289692684-c02577d5560d?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+}
+
+.user-info img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.best-times {
+  margin-top: 10px;
+}
+
+.activities-container {
+  flex: 1;
+}
+
+.Correr-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.Nadar-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.Ciclismo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+h2 {
+  text-align: center;
+}
