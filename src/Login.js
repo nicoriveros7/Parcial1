@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Login.css";
 
 function Login({ onLoginSuccess }) {
-  // Recibe la función como prop
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -22,7 +21,7 @@ function Login({ onLoginSuccess }) {
 
     setError("");
     alert("Login exitoso");
-    onLoginSuccess(); // Llama a la función para cambiar el estado en App.js
+    onLoginSuccess();
   };
 
   return (
@@ -32,7 +31,7 @@ function Login({ onLoginSuccess }) {
         <div>
           <label>Email</label>
           <input
-            type="text" // Cambia 'username' por 'text'
+            type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />

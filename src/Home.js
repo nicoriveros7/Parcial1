@@ -145,7 +145,7 @@ const Activities = [
 ];
 
 function Home() {
-  const { t } = useTranslation(); // Hook para traducción
+  const { t } = useTranslation();
   const [userData, setUserData] = useState({});
   const [activities, setActivities] = useState([]);
   const [modalShow, setModalShow] = useState(false);
@@ -226,7 +226,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Sección de información del usuario al final */}
       <div className="user-info">
         <img src={userData.profileImage} alt="profile" />
         <h2>{userData.fullName}</h2>
