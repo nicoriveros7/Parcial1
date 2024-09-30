@@ -1,12 +1,18 @@
 import "./App.css";
 import Login from "./Login";
-import React from "react";
 import Home from "./Home";
+import React, { useState } from "react";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true);
+  };
+
   return (
     <div>
-      <Home />
+      {isLoggedIn ? <Home /> : <Login onLoginSuccess={handleLoginSuccess} />}
     </div>
   );
 }

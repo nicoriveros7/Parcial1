@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 
-function Login() {
+function Login({ onLoginSuccess }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -14,13 +14,14 @@ function Login() {
       return;
     }
 
-    if (password.length < 8 || password.length > 8) {
+    if (password.length !== 8) {
       setError("La contraseña debe tener 8 caracteres");
       return;
     }
 
     setError("");
     alert("Login exitoso");
+    onLoginSuccess();
   };
 
   return (
@@ -30,7 +31,7 @@ function Login() {
         <div>
           <label>Email</label>
           <input
-            type="username"
+            type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
